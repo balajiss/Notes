@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    android:id="@+id/item_note_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/padding_sm">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guide_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.6"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/note_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingRight="@dimen/padding_xs"
+        android:text="Note Title"
+        android:textSize="@dimen/text_lg"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/note_text_truncated"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/guide_line"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/note_created_on"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:paddingLeft="@dimen/padding_xs"
+        android:text="Created On"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@id/note_text_truncated"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintLeft_toRightOf="@id/guide_line"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/note_text_truncated"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_xs"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="Test test test test. Test test test test. Test test test test. Test test test test. Test test test test. Test test test test. Test test test test. Test test test test. Test test test test. Test test test test. Test test test test. Test test test test. Test test test test. Test test test test. Test test test test. Test test test test. Test test test test. Test test test test. Test test test test. Test test test test. Test test test test. Test test test test. Test test test test. Test test test test. Test test test test. Test test test test. Test test test test. Test test test test. Test test test test. Test test test test. Test test test test. Test test test test. Test test test test. Test test test test. Test test test test. Test test test test. Test test test test."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/note_title"/>
+
+</android.support.constraint.ConstraintLayout>
