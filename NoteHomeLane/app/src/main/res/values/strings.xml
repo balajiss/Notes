@@ -5,6 +5,7 @@
     <string name="title">Title</string>
     <string name="discard">Yes</string>
     <string name="no">No</string>
+    <string name="no_note">Please add note using below button to list here</string>
     <string name="sure_to_discard">Discard changes?</string>
     <string name="sure_to_delete">Delete note?</string>
     <string name="say_something">Say something...</string>

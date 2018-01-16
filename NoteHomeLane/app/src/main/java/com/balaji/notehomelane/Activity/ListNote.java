@@ -32,6 +32,7 @@ public class ListNote extends NoteAbstractActivity {
     private NotesListAdapter notesListAdapter;
     private Context mContext;
     private List<Note> noteArrayList = new ArrayList<>();
+    private TextView noNote;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +43,7 @@ public class ListNote extends NoteAbstractActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        noNote = findViewById(R.id.no_note);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -69,7 +71,14 @@ public class ListNote extends NoteAbstractActivity {
 
     private void getAllNotes() {
         noteArrayList = NoteApplication.getDatabaseHandler().getAllNotes();
-        notesListAdapter.notifyDataSetChanged();
+        if(noteArrayList.size() > 0) {
+            noNote.setVisibility(View.GONE);
+            notesList.setVisibility(View.VISIBLE);
+            notesListAdapter.notifyDataSetChanged();
+        }else {
+            notesList.setVisibility(View.GONE);
+            noNote.setVisibility(View.VISIBLE);
+        }
     }
 
     @Override

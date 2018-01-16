@@ -5,6 +5,7 @@
     <dimen name="divider_height">1dp</dimen>
     <dimen name="padding">20dp</dimen>
     <dimen name="padding_sm">10dp</dimen>
+    <dimen name="padding_lg">30dp</dimen>
     <dimen name="padding_xs">5dp</dimen>
     <dimen name="text_lg">20sp</dimen>
     <dimen name="margin">20dp</dimen>
